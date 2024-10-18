@@ -3,29 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Honto</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>RIZZLERS ET CATFISHES</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <h1>Welcome to RIZZLERS ET CATFISHES!</h1>
+        <button id="openForm">Click Here to Provide Feedback</button>
 
-    <h1>Honto</h1>
-    <button onclick="showForm()">Click Here to Enter Your Details</button>
+        <div id="feedbackForm" class="hidden">
+            <h2>Feedback Form</h2>
+            <label for="whatsappUsername">WhatsApp Username:</label>
+            <input type="text" id="whatsappUsername" required>
+            
+            <label for="favoriteAdmin">Favorite Admin:</label>
+            <input type="text" id="favoriteAdmin" required>
+            
+            <label for="suggestions">Suggestions for Group Chat:</label>
+            <textarea id="suggestions" required></textarea>
+            
+            <label for="newAdmin">Do you want a new admin?</label>
+            <select id="newAdmin" required>
+                <option value="">Select...</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
 
-    <div id="form-container">
-        <form>
-            <label for="number">Phone Number:</label>
-            <input type="tel" id="number" name="number" required>
+            <div id="newAdminNameDiv" class="hidden">
+                <label for="newAdminName">Who do you want as admin?</label>
+                <input type="text" id="newAdminName">
+            </div>
 
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address" required>
-
-            <button type="submit">Submit</button>
-        </form>
+            <button id="submitFeedback">Submit</button>
+        </div>
     </div>
-
     <script src="script.js"></script>
 </body>
-                                           </html>
+                </html>
